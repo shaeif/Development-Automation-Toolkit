@@ -11,10 +11,7 @@ from dotenv import load_dotenv
 githubEmail = ""
 githunUsername = ""
 githubPassword = ""
-<<<<<<< HEAD
 workspace = ""
-=======
->>>>>>> af638639b14061c569729cb7e2345094162f832d
 
 def createRepo(fileName):
     driver = webdriver.Chrome()
