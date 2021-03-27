@@ -7,11 +7,11 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from dotenv import load_dotenv
 
-fileName = sys.argv[1]
 
-githubEmail = "shaeifaj@gmail.com"
-githunUsername = "shaeif"
-githubPassword = "open@github1594"
+githubEmail = ""
+githunUsername = ""
+githubPassword = ""
+workspace = ""
 
 def createRepo(fileName):
     driver = webdriver.Chrome()
@@ -41,7 +41,7 @@ def setUp():
     os.chdir(fileName)
 
 def start(fileName):
-    os.chdir("/home/shaeif/workspace")
+    os.chdir(workspace)
     options = ["0. Normal","1. Angular","2. laravel","3. React","4. React-Native"]
     for x in options:
         print(x)
@@ -56,8 +56,13 @@ def start(fileName):
         start(fileName)
     os.chdir(fileName)
     createLocalRepo()
-createRepo(fileName)
-start(fileName)
+
+if len(sys.argv) != 2: 
+    print("Usage : devops.py \"file name to be created\"")
+else:
+    fileName = sys.argv[1]
+    createRepo(fileName)
+    start(fileName)
         
 
 
