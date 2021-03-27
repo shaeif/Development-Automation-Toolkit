@@ -9,9 +9,9 @@ from dotenv import load_dotenv
 
 fileName = sys.argv[1]
 
-githubEmail = "shaeifaj@gmail.com"
-githunUsername = "shaeif"
-githubPassword = "open@github1594"
+githubEmail = ""
+githunUsername = ""
+githubPassword = ""
 
 def createRepo(fileName):
     driver = webdriver.Chrome()
